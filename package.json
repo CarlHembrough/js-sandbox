@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "sandbox for javascript stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build-js": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-cli": "^12.1.1",
+    "json-loader": "^0.5.4"
+  },
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
