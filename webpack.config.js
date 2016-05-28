@@ -7,7 +7,10 @@ module.exports = {
     loaders: [
       { test: /\.json$/, loader: 'json-loader' }
     ],
-    noParse: /node_modules\/json-schema\/lib\/validate\.js/
+    noParse: [ 
+       /node_modules\\json-schema\\lib\\validate\.js/,
+       /node_modueles\/json-schema\/lib\/validate\.js/
+    ]
   },
   node: {
     console: true,
