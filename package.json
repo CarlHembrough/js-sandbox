@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build-js": "webpack"
+    "build": "webpack",
+    "run": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest-cli": "^12.1.1",
-    "json-loader": "^0.5.4"
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "request": "^2.72.0"
