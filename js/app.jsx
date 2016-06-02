@@ -3,9 +3,9 @@
 'use strict'
 
 var React = require('react')
-var Hello = require('./Hello')
+var Hello = require('./view/Hello')
 
-var Authentication = require("./core/authentication")
+var Authentication = require("./model/authentication")
 
 console.log("From app.js!!!111")
 
