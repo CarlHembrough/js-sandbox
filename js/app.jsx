@@ -3,15 +3,9 @@
 'use strict'
 
 var React = require('react')
-var Hello = require('./view/Hello')
-
-var Authentication = require("./model/authentication")
+var ReactDom = require('react-dom')
+var Login = require('./view/Login')
 
 console.log("From app.js!!!111")
 
-var auth = new Authentication()
-auth.login("carlhuk@gmail.com")
-var loggedInAs = auth.getEmail()
-
-
-React.renderComponent(<Hello />, document.getElementById('content'))
+ReactDom.render(<Login />, document.getElementById('content'))
