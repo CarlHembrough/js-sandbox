@@ -22,9 +22,22 @@ module.exports = {
   externals: {
     //don't bundle the 'react' npm package with our bundle.js
     //but get it from a global 'React' variable
-    'react': 'React'
+    //'react': 'React'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
+  },
+  devServer: {
+    /* Send API requests on localhost to API server get around CORS */
+    hot: true,
+    proxy: { // proxy zebedee requests to zebedee
+      '/zebedee*': {
+        target: 'http://localhost:8082',
+        secure: false,
+        rewrite: function(req) {
+          req.url = req.url.replace(/^\/zebedee/, '');
+        }
+      }
+    }
   }
 }
