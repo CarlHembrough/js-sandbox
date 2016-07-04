@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "sandbox for javascript stuff",
   "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "build": "webpack",
-    "run": "webpack-dev-server"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,6 +14,12 @@
   },
   "dependencies": {
     "react": "^15.1.0",
-    "request": "^2.72.0"
+    "react-dom": "^15.1.0",
+    "request": "2.65.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "run": "webpack-dev-server"
   }
 }
