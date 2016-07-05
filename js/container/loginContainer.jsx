@@ -3,13 +3,9 @@
 'use strict';
 
 var React = require('react');
-
-var Authentication = require("../model/authentication")
 var Login = require("../view/login")
-var auth = new Authentication()
 
 var loginContainer = React.createClass({
-  displayName: 'Login',
   login: function (email, password) {
 
     var onSuccess = function (token) {
@@ -18,7 +14,7 @@ var loginContainer = React.createClass({
       })
     }.bind(this)
 
-    auth.login(email, password, onSuccess)
+    this.props.auth.login(email, password, onSuccess)
   },
   getInitialState: function () {
     return {

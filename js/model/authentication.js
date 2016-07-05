@@ -31,4 +31,11 @@ authentication.prototype.getEmail = function() {
   return this.email
 };
 
+authentication.prototype.isLoggedIn = function() {
+  if(this.token)
+    return true
+
+  return false
+};
+
 module.exports = authentication;
