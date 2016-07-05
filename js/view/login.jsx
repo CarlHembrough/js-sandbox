@@ -4,33 +4,18 @@
 
 var React = require('react');
 
-var Authentication = require("../model/authentication")
-var auth = new Authentication()
-
 var login = React.createClass({
   displayName: 'Login',
-  emailChanged: function() {
-    console.log(this.refs.emailInput.value);
+  emailChanged: function(event) {
+    console.log(event.target.value);
   },
   onSubmit: function(e) {
     e.preventDefault();
+
     var email = this.refs.emailInput.value;
     var password = this.refs.passwordInput.value;
 
-    var that = this
-    var onSuccess = function(token) {
-      that.setState({
-        token: token
-      })
-    }
-
-    auth.login(email, password, onSuccess)
-
-  },
-  getInitialState: function() {
-    return {
-      token: 'init'
-    };
+    this.props.login(email, password);
   },
   render: function () {
     return (
@@ -57,7 +42,7 @@ var login = React.createClass({
           />
 
         <button type="submit" id="login" class="btn-florence-login fl-panel--user-and-access__login ">Log in</button>
-        <p>{this.state.token}</p>
+        <p>{this.props.token}</p>
       </form>
     );
   }

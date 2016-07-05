@@ -4,8 +4,6 @@
 
 var React = require('react')
 var ReactDom = require('react-dom')
-var Login = require('./view/Login')
+var LoginContainer = require('./container/loginContainer')
 
-console.log("From app.js!!!111")
-
-ReactDom.render(<Login />, document.getElementById('content'))
+ReactDom.render(<LoginContainer />, document.getElementById('content'))
